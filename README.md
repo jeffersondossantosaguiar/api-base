@@ -1,7 +1,12 @@
-# api-base (In progress)
+# API REST  (In progress)
 
-Estudo de Api com utilizando o Node.
-
+Estudo de API REST utilizando o Node, Docker. Com utlizados conceitos SOLID, DRY.
 
 ## Framework web
 Express
+
+## ORM
+Typeorm
+
+# DATABASE DOCKER*
+POSTGRES
