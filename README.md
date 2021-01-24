@@ -8,5 +8,8 @@ Express
 ## ORM
 Typeorm
 
-# DATABASE DOCKER*
+## DATABASE
 POSTGRES
+
+### BIBLIOTECAS UTILIZADAS
+* bcryptjs - para criptografar as senhas dos usuários
