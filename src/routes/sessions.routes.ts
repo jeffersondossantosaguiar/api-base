@@ -1,18 +1,23 @@
 import { Router } from 'express'
-import { uuid } from 'uuidv4'
+import AuthenticateUserService from '../services/AuthenticateUserService'
 
 const sessionsRouter = Router()
 
-sessionsRouter.post('/', (request, response) => {
-  const { email, password } = request.body
+sessionsRouter.post('/', async (request, response) => {
+  try {
+    const { email, password } = request.body
 
-  const authentication = {
-    id: uuid(),
-    email,
-    password
+    const authenticateUser = new AuthenticateUserService()
+
+    const { user, token } = await authenticateUser.execute({
+      email,
+      password
+    })
+
+    return response.json({ user, token })
+  } catch (err) {
+    return response.status(400).json({ error: err.message })
   }
-
-  return response.json({ authentication })
 })
 
 export default sessionsRouter
