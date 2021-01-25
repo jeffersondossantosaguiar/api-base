@@ -1,6 +1,6 @@
 # API REST  (In progress)
 
-Estudo de API REST utilizando o Node, Docker. Com utlizados conceitos SOLID, DRY, middlewares.
+Estudo de API REST utilizando o Node, Docker. Com conceitos SOLID, DRY, middlewares mais tratativa de erros.
 
 ## Framework web
 Express
